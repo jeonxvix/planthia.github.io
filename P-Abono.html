@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planthia.aqp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <!--Encabezado-->
+    <header class="encabezado">
+        <a href="inicio.html" class="logo">
+            <img src="imagenes/planthia.jpg" alt="logo"></a>
+
+        <!--Barra-->
+        <nav class="barra">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>   
+        </nav>
+
+        <!--iconos-->
+        <div class="icons">
+            <a href="login.html" class="fas fa-user" id="login-btn" title="Iniciar sesión"></a>
+            <a href="carrito.html" class="fas fa-shopping-cart" id="cart-btn" title="Ver carrito"></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>   
+
+        <!--barra de busqueda-->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="busca aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>     
+
+        <!-- Barra lateral (sidebar) -->
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" id="close-btn">&times;</div>
+            <nav class="sidebar-nav">
+                <a href="inicio.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="Blog Cuidados.html">Blogs</a>
+                <a href="Nosotros.html">Nosotros</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="producto-detalle">
+            <section class="detalle-producto">
+                <img src="imagenes/abono_organico.jpg" alt="Abono Organo-minerales" class="detalle-img"/>
+                <div class="detalle-info">
+                    <h1>Abono órgano-minerales</h1>
+                    <p class="price">S/40.00</p>
+                    <p><strong>Características:</strong></p>
+                    <ul>
+                        <li>Fertilizante natural + mineral</li>
+                        <li>Mejora fertilidad y estructura del suelo</li>
+                        <li>Ideal para cultivos agrícolas intensivos</li>
+                    </ul>
+
+                    <table>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Detalle</th>
+                        </tr>
+                        <tr>
+                            <td>Composición</td>
+                            <td>NPK + materia orgánica</td>
+                        </tr>
+                        <tr>
+                            <td>Presentación</td>
+                            <td>Bolsa 10 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Aplicación</td>
+                            <td>Directa o mezclado</td>
+                        </tr>
+                        <tr>
+                            <td>Beneficios</td>
+                            <td>Mejora la fertilidad y estructura del suelo</td>
+                        </tr>
+                    </table>
+
+                    <a href="productos.html">← Volver a productos</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--pie de pagina-->
+    <footer class="pie">
+
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61575618570293" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/planthia.aqp/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/@planthia_?_t=ZM-8vmHiEGjBuZ&_r=1" class="fab fa-tiktok"></a>
+            <a href="https://wa.me/51983980656" class="fab fa-whatsapp"></a>
+        </div>
+
+
+        <div class="creditos"> 
+            <h3>Creado por el <span> Grupo 8 </span>  |  Todos los creditos reservados</h3>
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Asoc Rafael Hoyos Rubios Mz S Lt9</p>
+            <p><strong>Teléfono:</strong> 983980656 </p>
+            <p><strong>Email:</strong> planthia.aqp@gmail.com </p>   
+        </div>
+    </footer>
+    <script src="JS/barranav.js" type="text/javascript"></script>
+</html>

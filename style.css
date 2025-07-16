@@ -1,0 +1,1150 @@
+
+:root{
+    --main-color:#D3AD7F ;
+    --white:#fff; /* blacno */
+    --black: #000; /* negro*/
+    --bg:#eff1ee; /* plomo blackground */
+    --bggren: #f1f8f2;
+    --light-grey-border: #eee; /* bordes claros */
+    --gray-text: #555; /* texto gris general */
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    background:var(--bg);
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::webkit-scrollbar{
+    width: .8rem;
+}
+
+html::webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+
+section{
+    padding:2rem 7%;
+}
+
+/*estilo del encabezado*/
+
+.encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.0rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;/*fija el encabezado arriba*/
+    z-index:1000; /*siempre encima de otros*/
+    background: var(--white);
+}
+.encabezado .logo img{
+    height: 8rem;
+    width: 100%;
+    transform: skewx(10deg);
+}
+
+.encabezado .barra a{
+    margin:0 1.5rem;
+    font-size: 1.8rem; /*tamaño de in,prod,ser,nos*/
+    color: var(--black);
+    text-decoration: none;
+}
+
+.encabezado .barra a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.icons {
+    display: flex;
+    margin-left: auto;
+}
+
+.encabezado .icons div,     /*posicion de los iconos*/
+.encabezado .icons a {
+    color:var(--black);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.encabezado .icons a:hover {
+    color: var(--main-color);
+}
+
+/*diseño de la barra lateral (menu)*/
+#menu-btn{
+    display:inline-block; /* configuracion del boton menu*/
+}
+
+/*diseño de la barra lateral (menu)*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background: var(--white);
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1100; /*pro encima del encabezado*/
+    transition: right 0.3s ease; /*para deslizar la barra*/
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.sidebar-nav a {
+    padding: 15px 10px;
+    font-size: 1.8rem;
+    color: var(--black);
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.sidebar-nav a:hover {
+    color: var(--main-color);
+    padding-left: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.close-btn:hover {
+    color: var(--main-color);
+}
+
+
+/*estilo del ANUNCIO FLOTANTE*/
+
+.anuncio {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.anuncio-contenido {
+  background-color: #fff;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 400px; 
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+/*estilo del carrusel*/
+
+.carrousel {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    overflow: hidden;
+}
+.conteCarrousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+ .itemCarrousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.itemCarrouselTarjeta {
+    width: 100%;
+    height: 100%;
+}
+.itemCarrouselTarjeta img {
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.itemCarrouselArrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+        
+.itemCarrouselArrows a {
+    z-index: 1000; 
+    min-width: 70px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemCarrouselArrows > a > i {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.itemCarrouselArrows > a > i:hover {
+    cursor: pointer;
+    color: #ddd;
+}
+.conteCarrouselController {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.conteCarrouselController > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: grey;
+}
+.conteCarrouselController > a.active > i {
+    color: #333;
+}
+        
+.itemCarrouselTarjeta img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.itemCarrouselTarjeta img.active {
+    opacity: 1;
+}
+
+/*estilo de la seccion de inicio "agricultura moderna...."*/
+.inicio{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(img3.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.inicio .content{
+    max-width: 68rem;
+}
+
+.inicio .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:var(--black);
+}
+
+.inicio .content p{
+    font-size: 2rem;
+    font-weight: normal;
+    line-height:1.8;
+    padding:1rem 0;
+    color:var(--black);
+}
+
+/*diseño del banner(anuncio) */
+
+.banner-container{
+
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 7%;
+}
+
+.banner-container .banner{
+    background: linear-gradient(-55deg, #b2e9a9 29%, #9dd494 29.1%, #83d176 68%, #99eb8c 68.1%);
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 10px #0005;
+    overflow: hidden;
+}
+
+.banner-container .banner .abono{
+    flex: 1 1 250px;
+    padding:5px;
+    text-align: center;
+    display: block;
+}
+.banner-container .banner .abono img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+.banner-container .banner .content{
+    flex: 1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+
+.banner-container .banner .content span{
+    color: #eee;
+    font-size: 25px;
+}
+
+.banner-container .banner .content h3{
+    color: #fff;
+    font-size: 40px;
+}
+
+.banner-container .banner .content p{
+    color: #eee;
+    font-size: 20px;
+    padding:10px 0;
+}
+
+.banner-container .banner .content .btn{
+    display:block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #fff;
+    color: #83d176;
+    margin: 5px auto;
+    text-decoration: none;
+}
+
+.banner-container .banner .women{
+    position: relative;
+    bottom: -40px;
+    padding: 10px;
+    flex:1 1 250px;
+}
+
+/*titulo "sobre nosotros"*/
+
+.heading,
+.heading span{
+    text-align: center;
+    color: var(--main-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+/*contenido de "sobre nosotros"*/
+.nosotros .row {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    flex-wrap: wrap;
+}
+
+.nosotros .row .image {
+    flex: 1 1 45rem;
+    align-items: center;
+}
+
+.nosotros .row .image img {
+    width: 100%;
+}
+
+.nosotros .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+
+}
+.nosotros .row .content btn{
+    align-items: center;
+
+}
+
+.nosotros .row .content h3 {
+    font-size: 3rem;
+    color: #000;
+}
+
+.nosotros .row .content p {
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/*productos inicio*/
+.productos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem, 1fr));
+    gap: 2rem;
+}
+
+.productos .box-container .box{
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    background: var(--main-color);
+    transition: 0.3s ease;
+}
+
+.productos .box-container .box img{
+    height: 10rem;
+
+}
+
+.productos .box-container .box h3{
+    color: #fff;
+    font-size:2.5rem;
+    padding: 1rem 0;
+}
+
+.productos .box-container .box .price {
+    color: #fff;
+    font-size: 5rem;
+    padding: 2rem 0;
+
+}
+
+.productos .box-container .box .price span{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+}
+
+.productos .box-container .box:hover{
+    background: #81c784;
+}
+
+.productos .box-container .box:hover >*{
+    background:#81c784;
+}
+
+
+/*estilo del pie  de pagina*/
+.pie{
+    background:var(--bg);
+    text-align: center;
+}
+.pie .redes{
+    padding:2rem 0;
+}
+
+.pie .redes a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    color:#000;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.pie .redes a:hover{
+    background-color:#e3b98d;
+
+}
+.pie .creditos{
+    font-size: 1.5rem;
+    padding:1rem;
+}
+.pie .creditos span{
+    color: var(--main-color);
+}
+/*ESTILO NOSOTROS*/
+.nosotros-page {
+    max-width: 120rem; /* Limita el ancho máximo de la página para que no se estire demasiado */
+    margin: 0 auto; /* Centra el contenido de la página horizontalmente */
+    padding: 0 2rem; /* Añade un padding lateral para que el contenido no pegue a los bordes */
+    background-color: var(--bg); /* Asegura el color de fondo para la página, aunque ya está en el body */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;  Eliminamos esto porque el max-width y margin: auto ya centran el contenido */
+    min-height: calc(100vh - 12rem); /* Asegura que ocupe casi toda la altura de la ventana (menos el header) */
+    align-items: center;
+}
+
+/* Banner de la página de Nosotros */
+.nosotros-page .banner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem; /* Espacio debajo del banner */
+    margin-top: 10rem;
+    overflow: hidden;
+}
+
+.nosotros-page .banner img {
+    width: 100%;
+    height: 30rem; /* Altura del banner (ajusta si lo quieres más alto/bajo) */
+    object-fit: cover; /* Cubre el área sin distorsionar */
+    display: block;
+}
+
+/* Estilos para los bloques de texto (Tu Aliado, Misión, Visión) */
+.nosotros-page .block {
+    width: 100%; /* Ocupa el ancho completo dentro de .nosotros-page */
+    margin-bottom: 2.5rem;
+    padding: 3rem; /* Espacio interno del bloque */
+    background-color: var(--white);
+    border: 0.1rem solid var(--light-grey-border);
+    border-radius: 1.5rem; /* Aumenta el border-radius para más suavidad */
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1); /* Sombra más pronunciada */
+}
+
+.nosotros-page .block h3 {
+    color: var(--black);
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nosotros-page .block p {
+    color: var(--gray-text);
+    line-height: 1.7;
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.nosotros-page .location {
+    width: 100vw; /* Toma el ancho total de la ventana (viewport width) */
+    position: relative; /* Para poder usar left/right con vw */
+    align-items: center;
+    background-color: var(--white);
+    padding: 2rem;
+    margin-top: 2rem; /* Espacio superior para separar del último bloque */
+    margin-bottom: 2rem; /* Espacio inferior antes del footer */
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+
+}
+
+.nosotros-page .location h2 {
+    color: var(--main-color);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+}
+
+.nosotros-page .map-container {
+    max-width: 120rem; /* Limita el ancho del iframe dentro del contenedor para que no sea excesivo */
+    margin: 0 auto; /* Centra el iframe dentro de la sección .location */
+    height: 45rem; /* Ajusta la altura del mapa */
+    border: 0.1rem solid var(--light-grey-border);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.nosotros-page .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding-bottom: 2rem;
+}
+
+/*ESTILO BLOGS*/
+.blogs {
+    background-color: var(--bggren);
+}
+.blogs h1{
+    color:var(--black);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.galeria-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; /* Espacio entre los videos */
+    padding-bottom: 2.5rem;
+}
+
+.video {
+    position: relative; /* Necesario para la relación de aspecto responsiva */
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura es 56.25% del ancho) */
+    height: 0;
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    background-color: black; /* Un fondo si el video tarda en cargar */
+}
+
+.video iframe,
+.video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Elimina bordes predeterminados del iframe */
+}
+/*ESTILO PRODUCTOS*/
+marquee {
+    background-color: #81c784;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 20px;
+}
+main{
+    background-color: #eaf5ea;
+    padding-top:12rem;
+}
+
+.productos-section {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+}
+
+.productos-section h1 {
+    font-size: 2rem;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.buscador-filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buscador-filtros input[type="search"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.buscador-filtros input[type="search"]:focus {
+    border-color: #2e7d32;
+}
+
+.buscador-filtros select {
+    width: 200px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.product-box img {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.product-box h3 {
+    font-size: 1.2rem;
+    color: black;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.product-box .price {
+    font-size: 1.1rem;
+    color: mediumseagreen;
+    font-weight: bold;
+}
+
+.product-box .tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e63946;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+/*ESTILO PRODUCTOS UNO A UNO*/
+.producto-detalle {
+    background-color: #eaf5ea;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.producto-detalle .detalle-producto {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.producto-detalle .detalle-img {
+    flex: 1 1 300px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-detalle .detalle-info {
+    flex: 2 1 400px;
+    font-size: 1.6rem;
+}
+
+.producto-detalle .detalle-info h1 {
+    color: var(--black);
+    font-size: 3.0rem;
+    margin-bottom: 15px;
+}
+
+.producto-detalle .price {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.producto-detalle ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.producto-detalle table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f1f8f2;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1.5rem;
+}
+
+.producto-detalle th,
+.producto-detalle td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #c8e6c9;
+    text-align: left;
+}
+
+.producto-detalle th {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+}
+
+.producto-detalle tr:last-child td {
+    border-bottom: none;
+}
+
+.producto-detalle a {
+    text-decoration: none;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.producto-detalle a:hover {
+    text-decoration: underline;
+}
+
+/* PÁGINA DE CARRITO */
+
+.carrito-page-main {
+    background-color: #f1f8f2;
+    padding-top: 12rem; /* Espacio para el encabezado fijo */
+    padding-bottom: 2rem;
+    min-height: 25rem;
+}
+
+.cart-section {
+    max-width: 90rem; /* Ancho máximo del contenido del carrito */
+    margin: 4rem auto; /* Centrar y añadir margen superior/inferior */
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    padding: 3rem;
+}
+
+.cart-page-title {
+    font-size: 3.5rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 0.1rem solid var(--light-grey-border);
+    padding-bottom: 1.5rem;
+}
+
+.cart-items-container {
+    margin-bottom: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Más espacio entre los elementos del ítem */
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem dashed var(--light-grey-border);
+    position: relative;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cart-item img {
+    width: 10rem; /* Un poco más grande la imagen */
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    flex-shrink: 0; /* Evita que la imagen se encoja si el espacio es limitado */
+}
+
+.cart-item .item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+}
+
+.cart-item .item-details h4 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+}
+
+.cart-item .item-details .item-price {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+/* Controles de cantidad */
+.item-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    color: var(--gray-text);
+}
+
+.item-quantity-controls .quantity-btn {
+    background-color: var(--light-grey-border);
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.item-quantity-controls .quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.item-quantity-controls .item-quantity-display {
+    min-width: 2.5rem; /* Ancho fijo para el número */
+    text-align: center;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #e63946;
+    font-size: 3rem; /* Más grande para que sea fácil de ver y cliquear */
+    cursor: pointer;
+    position: absolute; /* Sigue siendo absoluto para posicionarlo en la esquina del ítem */
+    top: 1rem;
+    right: 0;
+    line-height: 1;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    color: #c0303c;
+}
+
+/* Resumen del carrito en la página */
+.cart-summary-page {
+    border-top: 0.1rem solid var(--light-grey-border);
+    padding-top: 2rem;
+    text-align: right; /* Alinea el total y botones a la derecha */
+}
+
+.cart-summary-page .cart-total {
+    display: flex;
+    justify-content: space-between; /* Alinea izq/der */
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.cart-summary-page .final-total {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color-darker); /* Un verde más oscuro para el total final */
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.1rem dashed var(--light-grey-border); /* Separador para el total final */
+}
+
+.cart-summary-page .btn {
+    display: inline-block; /* Para que los botones estén en línea si hay espacio */
+    width: auto; /* Ancho automático según contenido */
+    margin-left: 1rem; /* Espacio entre los botones */
+    margin-top: 2rem; /* Espacio superior */
+}
+
+.cart-summary-page .btn-checkout {
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.cart-summary-page .btn-checkout:hover {
+    opacity: 0.9;
+}
+
+.cart-summary-page .btn-continue-shopping {
+    background: var(--bg);
+    color: var(--black);
+    border: 1px solid var(--light-grey-border);
+}
+
+.cart-summary-page .btn-continue-shopping:hover {
+    background: var(--light-grey-border);
+}
+
+
+/* Metodo de pago */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 25px;
+    background: #eff1ee;
+}
+
+.container form {
+    width: 700px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.container form .row .col {
+    flex: 1 1 100%; /* Se ajusta el 100% del contenedor */
+}
+
+/* Estilo para los campos de entrada */
+.col .inputBox {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.col .inputBox label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.col .inputBox input, .col .inputBox select {
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho */
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.col .inputBox input:focus, .col .inputBox select:focus {
+    border: 1px solid #000;
+}
+
+.container form .submit_btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #5e8f94;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.container form .submit_btn:hover {
+    background: #73B5BD;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .producto-detalle .detalle-producto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-detalle .detalle-info {
+        text-align: center;
+    }
+
+    .producto-detalle table {
+        font-size: 0.95rem;
+    }
+
+    .producto-detalle .detalle-info ul {
+        text-align: left;
+        display: inline-block;
+    }
+    .nosotros-page {
+        padding: 0 1.5rem; /* Reduce el padding lateral en móviles */
+    }
+
+    .nosotros-page .banner img {
+        height: 20rem;
+    }
+
+    .nosotros-page .block {
+        padding: 1.5rem;
+    }
+
+    .nosotros-page .block h3 {
+        font-size: 2.2rem;
+    }
+
+    .nosotros-page .block p {
+        font-size: 1.5rem;
+    }
+
+    .nosotros-page .location {
+        padding: 2.5rem 1.5rem; /* Ajusta el padding del mapa en móviles */
+    }
+
+    .nosotros-page .location h2 {
+        font-size: 2.8rem;
+    }
+
+    .nosotros-page .map-container {
+        height: 30rem;
+    }
+  }

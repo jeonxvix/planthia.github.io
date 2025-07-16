@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planthia.aqp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <!--Encabezado-->
+    <header class="encabezado">
+        <a href="inicio.html" class="logo">
+            <img src="imagenes/planthia.jpg" alt="logo"></a>
+
+        <!--Barra-->
+        <nav class="barra">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>   
+        </nav>
+
+        <!--iconos-->
+        <div class="icons">
+            <a href="login.html" class="fas fa-user" id="login-btn" title="Iniciar sesión"></a>
+            <a href="carrito.html" class="fas fa-shopping-cart" id="cart-btn" title="Ver carrito"></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>   
+
+        <!--barra de busqueda-->
+        <div class="search-form">
+            <input type="search" id="buscador-principal" placeholder="busca aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>     
+
+        <!-- Barra lateral (sidebar) -->
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" id="close-btn">&times;</div>
+            <nav class="sidebar-nav">
+                <a href="inicio.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="Blog Cuidados.html">Blogs</a>
+                <a href="Nosotros.html">Nosotros</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <marquee>¡Promociones en Semillas, Insecticidas esta semana!🌼</marquee>
+
+        <section class="productos-section">
+            <h1>Nuestros Productos</h1>
+
+            <div class="buscador-filtros">
+                <form>
+                    <input type="search" id="search-box" name="search" placeholder="Busca el producto">
+                </form>
+
+                <select>
+                    <option>Oferta</option>
+                    <option>Precio mas bajo</option>
+                    <option>Precio mas alto</option>
+                    <option>Más vendido</option>   
+                </select>
+
+            </div>
+        </section>
+
+        <div class="product-grid">
+            <a href="P-Tomate.html" class="product-box" data-nombre="tomate semillas">
+                <img alt="producto 1" src="imagenes/sem_tomate.jpg"/>
+                <div class="tag"> Oferta </div>
+                <h3> Semillas de Tomate </h3>
+                <strong class="price"> S/6.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="semillas-tomate"
+                        data-product-name="Semillas de Tomate"
+                        data-product-price="6.00"
+                        data-product-image="imagenes/sem_tomate.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Zanahoria.html" class="product-box" data-nombre="zanahoria semillas">
+                <img alt="producto 2" src="imagenes/sem_zanahoria.jpg"/>
+                <div class="tag"> Oferta </div>
+                <h3> Semillas de Zanahoria </h3>
+                <strong class="price"> S/6.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="semillas-zanahoria"
+                        data-product-name="Semillas de Zanahoria"
+                        data-product-price="6.00"
+                        data-product-image="imagenes/sem_zanahoria.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Cebolla.html" class="product-box" data-nombre="cebolla semillas">
+                <img alt="producto 3" src="imagenes/cebolla.jpg"/>
+
+                <h3> Semillas de Cebolla </h3>
+                <strong class="price"> S/7.40</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="semillas-cebolla"
+                        data-product-name="Semillas de Cebolla"
+                        data-product-price="7.40"
+                        data-product-image="imagenes/cebolla.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Abono.html" class="product-box" data-nombre="abono organico fertilizante">
+                <img alt="producto 4" src="imagenes/abono_organico.jpg"/>
+
+                <h3> Abono órgano-minerales </h3>
+                <strong class="price"> S/40.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="abono-organico"
+                        data-product-name="Abono órgano-minerales"
+                        data-product-price="40.00"
+                        data-product-image="imagenes/abono_organico.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Fibra.html" class="product-box" data-nombre="fibra coco tierra">
+                <img alt="producto 5" src="imagenes/fibra_coco.jpg"/>
+
+                <h3> Fibra de coco </h3>
+                <strong class="price"> S/40.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="fibra-coco"
+                        data-product-name="Fibra de coco"
+                        data-product-price="40.00"
+                        data-product-image="imagenes/fibra_coco.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Fertilizante.html" class="product-box" data-nombre="fertilizante npk 20-20-20">
+                <img alt="producto 6" src="imagenes/fertilizante_nkp.jpg"/>
+
+                <h3> Fertilizante NPK 20-20-20 </h3>
+                <strong class="price"> S/150.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="fertilizante-npk"
+                        data-product-name="Fertilizante NPK 20-20-20"
+                        data-product-price="150.00"
+                        data-product-image="imagenes/fertilizante_nkp.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Pino.html" class="product-box" data-nombre="pino planta">
+                <img alt="producto 7" src="imagenes/Pino.jpg"/>
+
+                <h3> Planta de Pino </h3>
+                <strong class="price"> S/120.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="planta-pino"
+                        data-product-name="Planta de Pino"
+                        data-product-price="120.00"
+                        data-product-image="imagenes/Pino.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P- Eucalipto.html" class="product-box" data-nombre="eucalipto planta medicinal">
+                <img alt="producto 8" src="imagenes/Eucalipto.jpg"/>
+
+                <h3> Planta de Eucalipto </h3>
+                <strong class="price"> S/60.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="planta-eucalipto"
+                        data-product-name="Planta de Eucalipto"
+                        data-product-price="60.00"
+                        data-product-image="imagenes/Eucalipto.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Sulfato.html" class="product-box" data-nombre="sulfato cobre">
+                <img alt="producto 9" src="imagenes/Sulfato de cobre.jpg"/>
+                <div class="tag"> Oferta </div>
+                <h3> Sulfato de Cobre </h3>
+                <strong class="price"> S/60.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="sulfato-cobre"
+                        data-product-name="Sulfato de Cobre"
+                        data-product-price="60.00"
+                        data-product-image="imagenes/Sulfato de cobre.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+
+            <a href="P-Insecticida.html" class="product-box" data-nombre="insecticida agro kill">
+                <img alt="producto 10" src="imagenes/Agro.jpg"/>
+                <div class="tag"> Oferta </div>
+                <h3> Insecticida Agro Kill </h3>
+                <strong class="price"> S/20.00</strong>
+                <button class="add-to-cart-btn"
+                        data-product-id="insecticida-agro-kill"
+                        data-product-name="Insecticida Agro Kill"
+                        data-product-price="20.00"
+                        data-product-image="imagenes/Agro.jpg">
+                    <i class="fas fa-shopping-cart"></i> Agregar
+                </button>
+            </a>
+        </div>
+        <div id="no-results" style="display:none; text-align:center; color:red; font-weight:bold; margin-top:20px;">
+            No se encontraron productos.
+        </div>
+    </main>
+    <!--pie de pagina-->
+    <footer class="pie">
+
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61575618570293" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/planthia.aqp/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/@planthia_?_t=ZM-8vmHiEGjBuZ&_r=1" class="fab fa-tiktok"></a>
+            <a href="https://wa.me/51983980656" class="fab fa-whatsapp"></a>
+        </div>
+
+
+        <div class="creditos"> 
+            <h3>Creado por el <span> Grupo 8 </span>  |  Todos los creditos reservados</h3>
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Asoc Rafael Hoyos Rubios Mz S Lt9</p>
+            <p><strong>Teléfono:</strong> 983980656 </p>
+            <p><strong>Email:</strong> planthia.aqp@gmail.com </p>   
+        </div>
+    </footer>
+    
+    <script src="JS/Productos.js" type="text/javascript"></script>
+</html>

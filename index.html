@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planthia.aqp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+<body>
+    <!--Encabezado-->
+    <header class="encabezado">
+        <a href="inicio.html" class="logo">
+            <img src="imagenes/planthia.jpg" alt="logo"></a>
+
+        <!--Barra-->
+        <nav class="barra">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>   
+            <a href="#productos">Productos</a>
+   
+        </nav>
+
+        <!--iconos-->
+        <div class="icons">
+            <a href="login.html" class="fas fa-user" id="login-btn" title="Iniciar sesión"></a>
+            <a href="carrito.html" class="fas fa-shopping-cart" id="cart-btn" title="Ver carrito"></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>   
+
+    </header>
+
+
+        <!-- Barra lateral (sidebar) -->
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" id="close-btn">&times;</div>
+            <nav class="sidebar-nav">
+                <a href="inicio.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="Blog Cuidados.html">Blogs</a>
+                <a href="Nosotros.html">Nosotros</a>
+            </nav>
+        </div>
+        <!-- ANUNCIO FLOTANTE -->
+        
+    <div id="ventanaAnuncio" class="anuncio">
+      <div class="anuncio-contenido">
+        <span class="cerrar" onclick="cerrarAnuncio()">&times;</span>
+        <h2> 🎉 ¡Oferta Especial!</h2>
+        <p>Visita nuestra tienda y obtén un 20% de descuento hoy.</p>
+      </div>
+    </div>
+
+        
+        <!-- Carrousel -->
+ <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel">
+                <!-- Contenedor de imágenes (se actualizará con JS) -->
+                <div class="itemCarrouselTarjeta">
+                    <img src="imagenes/carrusel1.jpg" alt="Imagen 1" class="active">
+                    <img src="imagenes/carrusel2.jpg" alt="Imagen 2">
+                    <img src="imagenes/carrusel3.jpg" alt="Imagen 3">
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="itemCarrouselArrows">
+                    <a id="arrowPrev"><i class="fas fa-chevron-left"></i></a>
+                    <a id="arrowNext"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Indicadores/puntos (3 puntos para 3 imágenes) -->
+        <div class="conteCarrouselController">
+        <a href="#" data-index="0" class="active"><i class="fas fa-circle"></i></a>
+        <a href="#" data-index="1"><i class="far fa-circle"></i></a>
+        <a href="#" data-index="2"><i class="far fa-circle"></i></a>
+    </div>
+    </div>
+        <!--pagina de inicio-->
+
+        <section class="inicio" id="inicio">
+
+            <div class="content">
+                <h3> Agricultura Moderna, Alimento Sostenible </h3>
+                <p> En Planthia, nos dedicamos a la producción agrícola de alta calidad, 
+                    combinando técnicas tradicionales con innovación tecnológica para garantizar cultivos 
+                    sostenibles y nutritivos. Nuestra misión es alimentar a las comunidades de manera responsable, 
+                    cuidando el medio ambiente y apoyando a los agricultores locales.</p> 
+                <a href="productos.html" class="btn"> Mira nuestros Productos </a>
+            </div>
+        </section>
+
+        <!--BANNER-->
+        <section class="banner-container">
+            <div class="banner">
+                <div class="abono">
+                    <img src="imagenes/abono_oferta.png" alt="">
+                </div>
+                <div class="content">
+                    <span>hasta</span>
+                    <h3>50% de descuento</h3>
+                    <p>la oferta termina en 5 dias</p> 
+                    <a href="productos.html" class="btn"> Oferta </a>
+                </div>
+                <div class="women">
+                    <img src="imagenes/women.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- nosotros-->       
+        <section class="nosotros" id="nosotros">
+
+            <h1 class="heading"> <span>SOBRE</span>  NOSOTROS </h1>
+
+            <div class="row">
+
+                <div class="image">
+                    <img src="imagenes/nosotros inicio.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>  Nuestra Historia </h3>
+                    <p> Planthia, nació en 1993 con un propósito claro: revolucionar la agricultura 
+                        desde la tradición y la innovación. Fundada por Angeles , comenzamos 
+                        como un pequeño proyecto familiar y hoy somos referentes en ("cultivos orgánicos", 
+                        "agricultura de precisión", "distribución sostenible").</p>
+
+                    <p> Somos un equipo de expertos agrónomos, ingenieros y productores unidos por el respeto a la tierra.
+                        "La tierra no es una herencia, es un préstamo de futuras generaciones".</p>
+                    <a href="Nosotros.html" class="btn" > learn more </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- productos inicio -->       
+
+        <section class="productos" id="productos">
+
+            <h1 class="heading"> our <span>productos</span> </h1>
+
+            <div class ="box-container">
+                <div class="box">
+                    <img src="imagenes/sem_tomate.jpg" alt="">                   
+                    <h3>Semillas de Tomate</h3>
+                    <div class="price">S/6.00<span>S/12.90</span></div>
+                    <a href="carrito.html" class="btn">add to cart</a>
+                </div> 
+
+                <div class="box">
+                    <img src="imagenes/sem_zanahoria.jpg" alt=""/>
+                    <h3>Semillas de Zanahoria</h3>
+                    <div class="price">S/6.00<span>S/15.90</span></div>
+                    <a href="carrito.html" class="btn">add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="imagenes/Sulfato de cobre.jpg" alt="">                   
+                    <h3>Sulfato de Cobre</h3>
+                    <div class="price">S/60.00<span>S/99.90</span></div>
+                    <a href="carrito.html" class="btn">add to cart</a>
+                </div>
+            </div>            
+          
+        </section>
+
+    </body>
+
+    <!--pie de pagina-->
+    <footer class="pie">
+
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61575618570293" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/planthia.aqp/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/@planthia_?_t=ZM-8vmHiEGjBuZ&_r=1" class="fab fa-tiktok"></a>
+            <a href="https://wa.me/51983980656" class="fab fa-whatsapp"></a>
+        </div>
+
+
+        <div class="creditos"> 
+            <h3>Creado por el <span> Grupo 8 </span>  |  Todos los creditos reservados</h3>
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Asoc Rafael Hoyos Rubios Mz S Lt9</p>
+            <p><strong>Teléfono:</strong> 983980656 </p>
+            <p><strong>Email:</strong> planthia.aqp@gmail.com </p>   
+        </div>
+    </footer>
+
+    <script src="JS/barranav.js" type="text/javascript"></script>
+    
+</html>
